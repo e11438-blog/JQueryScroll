@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+               
+    <style>
+        #maincontent{
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        #nav{
+            overflow: auto;
+            height: 100%;
+            position:relative;
+            background-color: #373837;
+            color: white;
+            padding-left:20px;
+            padding-right:20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        #nav ul{
+               list-style: none outside none;
+               overflow: auto;
+               white-space: nowrap;
+               vertical-align: middle;
+        }
+        #nav ul li{
+                display: inline;
+                padding: 7px;
+                margin-right: 4px;
+                font-style: italic;
+                color: #cccccc;
+        }
+
+    </style>
+    
+</head>
+<body onscroll="bodyScroll();">
+    <div id="nav">
+    <ul>
+        <li>Home</li> 
+        <li>About us</li>
+        <li>Contact</li>
+        <li>Support</li>
+        
+    </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">&nbsp;</div>
+            <div id="maincontent" class="col-md-4">
+                <h1>
+                Main content
+                </h1><br/>
+                <p>Ut pretium purus quis dignissim pretium. Duis at tincidunt mauris, a pretium nibh. Cras placerat velit eu laoreet hendrerit. Mauris rutrum scelerisque nunc, nec maximus risus euismod eget. Aenean malesuada vehicula enim, nec blandit orci rutrum at. Nulla ex lorem, vehicula vel augue laoreet, rhoncus pulvinar urna. Morbi quis pharetra erat. Duis vulputate neque id mi tempor commodo. Vivamus semper neque quis sem tincidunt, in pretium elit vulputate. Nulla lectus arcu, semper sed massa eu, varius tempus quam. Fusce nulla lorem, maximus id semper at, blandit vel orci.</p>
+                <p>
+                Suspendisse posuere dolor eu tincidunt cursus. Nunc suscipit euismod elit eget varius. Proin molestie nisi in elit aliquet rutrum. Nulla tempus placerat commodo. Curabitur fermentum mauris erat, nec efficitur orci ultricies vel. Quisque porta auctor egestas. Donec in rutrum mauris, vel pellentesque tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus mattis blandit rutrum. Vivamus nec neque eget erat malesuada suscipit quis et nisl. Mauris aliquet leo diam, nec accumsan velit vehicula non. Nam dapibus felis et varius mollis. Nunc sit amet turpis magna. Quisque sit amet luctus leo.
+                </p>
+                <p>
+                Etiam dignissim leo ac nisi eleifend tempus. Integer at ipsum vitae ex pellentesque interdum. Ut et tortor imperdiet, fringilla enim vel, semper diam. In nec congue urna. Donec pharetra vitae urna at placerat. Nulla pellentesque ipsum sagittis elementum ullamcorper. Integer risus leo, ullamcorper scelerisque tristique eu, posuere quis nunc. Integer eget felis feugiat ipsum eleifend ultricies. Curabitur non mollis nisi. Etiam sed condimentum est. Sed varius dignissim efficitur. Duis a sagittis dui, sed posuere leo. Nam ac ullamcorper velit.
+                </p>
+                <p>
+                Suspendisse posuere dolor eu tincidunt cursus. Nunc suscipit euismod elit eget varius. Proin molestie nisi in elit aliquet rutrum. Nulla tempus placerat commodo. Curabitur fermentum mauris erat, nec efficitur orci ultricies vel. Quisque porta auctor egestas. Donec in rutrum mauris, vel pellentesque tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus mattis blandit rutrum. Vivamus nec neque eget erat malesuada suscipit quis et nisl. Mauris aliquet leo diam, nec accumsan velit vehicula non. Nam dapibus felis et varius mollis. Nunc sit amet turpis magna. Quisque sit amet luctus leo.
+                </p>
+            </div>
+            <div class="col-md-4">&nbsp;</div>
+        </div><!--row-->
+    </div><!--Container-->     
+    
+    <script>
+        var scrollTimer = -1;
+
+    function bodyScroll() {
+        //document.body.style.backgroundColor = "white";
+        //$('#maincontent').css("backgroundr","white");
+        $('#maincontent').css('background-color','lightGrey');
+        
+        
+        if($('#maincontent')==null){
+            console.log("null one eodsfsdf");
+        }else{
+            console.log("no null");
+        }
+        
+        if (scrollTimer != -1)
+            clearTimeout(scrollTimer);
+
+        scrollTimer = window.setTimeout("scrollFinished()", 300);
+    }
+
+    function scrollFinished() {
+       $('#maincontent').css("background","white");        
+         if($('#maincontent')==null){
+            console.log("null one stopped");
+        }else{
+            console.log("no null stopeed");
+        }
+    }
+        
+       
+    
+    </script>
+    
+</body>
+
+</html>
