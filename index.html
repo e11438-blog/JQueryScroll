@@ -41,7 +41,7 @@
     </style>
     
 </head>
-<body onscroll="bodyScroll();">
+<body>
     <div id="nav">
     <ul>
         <li>Home</li> 
@@ -74,36 +74,14 @@
     </div><!--Container-->     
     
     <script>
-        var scrollTimer = -1;
-
-    function bodyScroll() {
-        //document.body.style.backgroundColor = "white";
-        //$('#maincontent').css("backgroundr","white");
-        $('#maincontent').css('background-color','lightGrey');
-        
-        
-        if($('#maincontent')==null){
-            console.log("null one eodsfsdf");
-        }else{
-            console.log("no null");
+      $(window).scroll(function() {
+        if($(window).scrollTop() > 0) {
+           $('#maincontent').css("background","gray");
+        } else {
+            $('#maincontent').css("background","white");
+            alert("Now you are in the top");
         }
-        
-        if (scrollTimer != -1)
-            clearTimeout(scrollTimer);
-
-        scrollTimer = window.setTimeout("scrollFinished()", 300);
-    }
-
-    function scrollFinished() {
-       $('#maincontent').css("background","white");        
-         if($('#maincontent')==null){
-            console.log("null one stopped");
-        }else{
-            console.log("no null stopeed");
-        }
-    }
-        
-       
+    });
     
     </script>
     
